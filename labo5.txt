@@ -1,0 +1,43 @@
+pm2 - process
+pm2 ui - web user interface
+docker ui - gere la globalité des containers
+
+https://registry.hub.docker.com/_/httpd/
+https://registry.hub.docker.com/_/node/
+
+mode_headers : manipuler les headers
+
+struct
+
+backend
+	app
+	hearbeat
+	.dockerignore
+	Dockerfile
+	start.sh
+		SERVER_IP='awk XR
+frontend
+	app
+		app.js
+		bower.josn
+		index.php
+	hearbeat
+	.dockerignore
+	.Dockerfile
+	frontend.conf // 
+	start.sh // run par docker lors de l'instanciation du container
+lb
+	.dockerignore
+	Dockerfile
+	lb
+node-controller
+	doc
+	
+	pm2.json
+	start.sh
+	template.mustache
+node-simulator
+Vangrantfile
+provision.sh
+	
+
