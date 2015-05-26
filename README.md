@@ -1,5 +1,28 @@
 # RES: Web Infrastructure Lab
 
+##
+### Group members
+Michaël Berthouzoz
+
+Loïc Haas
+
+Stéphane Donnet
+
+Thibault Schowing
+
+### Members contribution
+## 
+
+**Michaël Berthouzoz** : Master Chief and node.js instructor
+
+**Loïc Haas** : 
+
+**Stéphane Donnet** : 
+
+**Thibault Schowing** : 
+
+
+##
 ### Objectives
 
 The main goal of this lab is to learn **how to setup a web infrastructure** and to become familiar with the role of several components (http servers, reverse proxies, load balancers). 
