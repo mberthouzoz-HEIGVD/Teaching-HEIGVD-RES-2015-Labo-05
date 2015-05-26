@@ -51,3 +51,7 @@ crashlytics-build.properties
 
 ### Vagrant ###
 .vagrant/
+.idea
+.vagrant
+/*.iml
+*.ini
