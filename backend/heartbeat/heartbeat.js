@@ -7,7 +7,7 @@ var s = dgram.createSocket('udp4');
 PROTOCOL_MULTICAST_ADDRESS = "239.255.22.5";
 PROTOCOL_PORT = 9907;
 
-function hearthBeat(){
+function HearthBeat(){
 
     var that = this;
     HearthBeat.prototype.update = function() {
@@ -18,4 +18,4 @@ function hearthBeat(){
     setInterval(that.update, 200);
 }
 
-var hb = new hearthBeat();
+var hb = new HearthBeat();
