@@ -13,13 +13,28 @@ Thibault Schowing
 ### Members contribution
 ## 
 
-**Michaël Berthouzoz** : Master Chief and node.js instructor
+**Michaël Berthouzoz** : 
+
+Master Chief and node.js instructor. Set up the workspace.
+
+Docker configuration, Front-end & back-end , Apache2
+
 
 **Loïc Haas** : 
 
+Docker configuration, Apache2 (Reverse Proxy & load balancer)
+
 **Stéphane Donnet** : 
 
+Docker configuration, Web app (front-end & back-end)
+
 **Thibault Schowing** : 
+
+Docker configuration, Apache2 (Reverse Proxy & load balancer)
+
+**All** :
+
+Understanding and discussing the structure and the different elements to set up. Web app implementation.
 
 
 ##
