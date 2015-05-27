@@ -1,2 +1,3 @@
-#!/bin/bash
-/usr/local/apache2/bin/apachectl start
+#!bin/bash
+pm2 start /discover.js
+#pm2 monit

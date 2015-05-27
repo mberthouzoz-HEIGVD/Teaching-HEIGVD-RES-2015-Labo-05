@@ -12,11 +12,13 @@ MAINTAINER Michael Berthouzoz
 # When we create the image, we copy files from the host into
 # the image file system. This is NOT a shared folder!
 #
-COPY ./app /backend
+ADD ./app /app
+COPY ./heartbeat/heartbeat.js /heartbeat.js
 
+COPY start.sh /backend/start.sh
 RUN npm install express
 RUN npm install -g pm2@0.12.9
 
 EXPOSE 80
 
-CMD /backend/start.sh
+CMD ["bash", "/backend/start.sh"]

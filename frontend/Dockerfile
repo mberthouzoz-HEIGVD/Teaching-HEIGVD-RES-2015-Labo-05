@@ -21,10 +21,11 @@ RUN npm install -g pm2@0.12.9
 # the image file system. This is NOT a shared folder!
 #
 
-COPY www /app/
+ADD ./app /app
 
 COPY ./start.sh /frontend/start.sh
+COPY ./heartbeat.js /heartbeat.js
 
 EXPOSE 80
 
-CMD /frontend/start.s
+CMD ["bash", "/frontend/start.sh"]

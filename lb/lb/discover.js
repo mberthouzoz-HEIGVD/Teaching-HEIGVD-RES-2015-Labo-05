@@ -4,7 +4,6 @@ var tblBack = [];
 
 var discover = dgram.createSocket('udp4');
 
-
 PROTOCOL_MULTICAST_ADDRESS = "239.255.22.5";
 PROTOCOL_PORT = 9907;
 
@@ -14,6 +13,7 @@ discover.bind(PROTOCOL_PORT, function() {
 
 discover.on('message', function(msg, source) {
 
+    console.log('message from %s', source.address);
     if(tblFront.indexOf(source.address) == -1 && tblBack.indexOf(source.address) == -1){
 
         if(msg == "frontend"){
