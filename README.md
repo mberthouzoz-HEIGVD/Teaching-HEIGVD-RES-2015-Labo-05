@@ -11,7 +11,12 @@ Stéphane Donnet
 Thibault Schowing
 
 ### Members contribution
-## 
+##  
+Due to the required level of understanding for this lab, most of the tasks have been accomplished in group and not by a single person. This allows every member to search for and understand the required steps.
+
+The tasks below describes aproximately what the different members have mostly done but this is all relative. 
+##
+
 
 **Michaël Berthouzoz** : 
 
@@ -24,17 +29,23 @@ Docker configuration, Front-end & back-end , Apache2
 
 Docker configuration, Apache2 (Reverse Proxy & load balancer)
 
+Set up the containers and heartbeat
+
 **Stéphane Donnet** : 
 
 Docker configuration, Web app (front-end & back-end)
+
+Heardbeat
 
 **Thibault Schowing** : 
 
 Docker configuration, Apache2 (Reverse Proxy & load balancer)
 
+Web app ideas
+
 **All** :
 
-Understanding and discussing the structure and the different elements to set up. Web app implementation.
+Understanding and discussing the structure and the different elements to set up. Web app implementation and docker specifications.
 
 
 ##
