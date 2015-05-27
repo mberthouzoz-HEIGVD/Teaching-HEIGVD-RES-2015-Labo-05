@@ -9,7 +9,7 @@ function HearthBeat(){
 
     var that = this;
     HearthBeat.prototype.update = function() {
-        var payload = "frontend";
+        var payload = JSON.stringify("frontend");
         message = new Buffer(payload);
         s.send(message, 0, message.length, PROTOCOL_PORT, PROTOCOL_MULTICAST_ADDRESS, function(err, bytes){});
     }

@@ -1,8 +1,9 @@
 <html>
 <head>
     <title>Application WEB</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all"/>
     <script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/script.js"></script>
 
 </head>
 <body>
