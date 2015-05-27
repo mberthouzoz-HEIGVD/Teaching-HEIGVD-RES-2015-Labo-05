@@ -8,8 +8,8 @@ var discover = dgram.createSocket('udp4');
 PROTOCOL_MULTICAST_ADDRESS = "239.255.22.5";
 PROTOCOL_PORT = 9907;
 
-discover.bind(protocol.PROTOCOL_PORT, function() {
-    discover.addMembership(protocol.PROTOCOL_MULTICAST_ADDRESS);
+discover.bind(PROTOCOL_PORT, function() {
+    discover.addMembership(PROTOCOL_MULTICAST_ADDRESS);
 });
 
 discover.on('message', function(msg, source) {
