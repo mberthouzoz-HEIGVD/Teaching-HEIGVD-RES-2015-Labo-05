@@ -1,5 +1,3 @@
-var protocol = require('./hearthbeat-protocol');
-
 //Import du module pour l'utilisation de UDP
 var dgram = require('dgram');
 
