@@ -49,15 +49,10 @@ Understanding and discussing the structure and the different elements to set up.
 ##
 ##
 ## Launch instructions
+
 1. Launch and provision the vagrant virtual machine with "vagrant up --provision"
-2. Build the images
-	1. docker build -t backend /vagrant/backend
-	2. docker build -t frontend /vagrant/frontend
-	3. docker build -t lb /vagrant/lb
-3. Run once the load balancer image with: docker run -d -p 80:80 lb
-4. Run as many time as you want backend and frontend images
-	1. docker run -d frontend
-	2. docker run -d backend
+2. Connect to the virtual machine with "vagrant ssh" and simply run the "launchMe.sh" script to build and start all the containers.
+3. Make a coffee and take a look at the script and the dockerUI page (192.168.42.42:9000). You've plenty of time during the provisionning ! This will take approximately 20 minutes.
 
 ## Implémentation
 ### Vagrantfile
