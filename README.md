@@ -46,6 +46,91 @@ Web app ideas
 **All** :
 
 Understanding and discussing the structure and the different elements to set up. Web app implementation and docker specifications.
+##
+##
+## Launch instructions
+1. Launch and provision the vagrant virtual machine with "vagrant up --provision"
+2. Build the images
+	1. docker build -t backend /vagrant/backend
+	2. docker build -t frontend /vagrant/frontend
+	3. docker build -t lb /vagrant/lb
+3. Run once the load balancer image with: docker run -d -p 80:80 lb
+4. Run as many time as you want backend and frontend images
+	1. docker run -d frontend
+	2. docker run -d backend
+
+## Implémentation
+### Vagrantfile
+Install docker and
+Only the RAM and the number of cores have been modified. 
+### Loadbalancer
+#### Dockerfile
+Image from httpd:2.4 (Apache)
+
+Run necessary command such as:
+
+1. update packet manager
+2. install nodejs
+3. install npm (node packet manager)
+4. copy some necessary files in the image (from the local directory to the container)
+5. CMD: execute the start.sh when the container is launched (run)
+#### Start.sh
+1. Start the discover.js with pm2
+2. Create the backend.conf and frontend.conf files
+3. Launch apache in the console
+
+#### //////javascript description etc
+
+##
+### Heartbeat
+
+
+##
+### Backend
+#### Dockerfile
+Image based from node
+
+1. Copy the app directory
+2. copy the heartbeat.js file in the image
+3. copy the start.sh file in the image
+4. install express and pm2
+5. Use port 80
+6. CMD: execute the start.sh when the container is launched (run)
+#### Start.sh
+1. start app.js with pm2
+2. start heartbeat.js with mp2
+3. start the pm2 monitoring
+
+#### ///////// Le reste javascript description etc
+##
+### Frontend
+#### Dockerfile
+Image from tutum/apache-php
+
+Run necessary command such as:
+
+1. install nodejs
+2. install npm
+3. install pm2
+4. Copy the app directory
+5. Copy start.sh and heartbeat.js in the image
+6. Use the port 80
+7. execute start.sh when container is launched (run)
+#### Start.sh
+1. start heartbeat.js with pm2
+2. Launch apache in the console
+
+##
+## Result and validation
+Here is a screenshot showing the LoadBalancer managment UI. A bunch of backend and frontend have been launched to show the IP's of the different containers. In the ressources tab one can see the cookie that give the ROUTEID to folow. This cookie is given by Apache, it's the "sticky session". 
+##
+[![](pictures/LoadBalancerAllTest1.jpg)](pictures/LoadBalancerAllTest1.jpg)
+##
+Here, wi test the application which goal is to randomly send a color name to the user.
+You can see below, that we made 9 color request what is exactly in relation with the number en elected backend server reponse.
+##
+[![](pictures/ApplicationWebTest1.jpg)](pictures/ApplicationWebTest1.jpg)
+
 
 
 ##
