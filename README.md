@@ -13,35 +13,31 @@ Thibault Schowing
 ### Members contribution
 ##  
 Due to the required level of understanding for this lab, most of the tasks have been accomplished in group and not by a single person. This allows every member to search for and understand the required steps.
-
-The tasks below describes aproximately what the different members have mostly done but this is all relative. 
+ 
 ##
 
 
 **Michaël Berthouzoz** : 
 
-Master Chief and node.js instructor. Set up the workspace.
+Master Chief and node.js instructor: frontend and backend
 
-Docker configuration, Front-end & back-end , Apache2
+Set up the workspace.
 
 
 **Loïc Haas** : 
 
-Docker configuration, Apache2 (Reverse Proxy & load balancer)
+Apache2 configuration (Reverse Proxy & load balancer)
 
-Set up the containers and heartbeat
 
 **Stéphane Donnet** : 
 
-Docker configuration, Web app (front-end & back-end)
-
-Heardbeat
+Heardbeat.js and discover.js
 
 **Thibault Schowing** : 
 
-Docker configuration, Apache2 (Reverse Proxy & load balancer)
+Docker configuration and workspace set up.
 
-Web app ideas
+Genius web app idea
 
 **All** :
 
@@ -51,12 +47,12 @@ Understanding and discussing the structure and the different elements to set up.
 ## Launch instructions
 
 1. Launch and provision the vagrant virtual machine with "vagrant up --provision"
-2. Connect to the virtual machine with "vagrant ssh" and simply run the "launchMe.sh" script to build and start all the containers.
-3. Make a coffee and take a look at the script and the dockerUI page (192.168.42.42:9000). You've plenty of time during the provisionning ! This will take approximately 20 minutes.
+2. Connect to the virtual machine with "vagrant ssh" and simply run the "launchMe.sh" script to build and start all the containers. This will launch the loadbalancer and reverse proxy and some frontend and backend.
+3. Make a coffee and take a look at the script and the dockerUI page (192.168.42.42:9000). You've plenty of time during the provisionning and the building of the containers ! This will take approximately 20 minutes.
 
 ## Implémentation
 ### Vagrantfile
-Install docker and
+Install docker and other stuffs.
 Only the RAM and the number of cores have been modified. 
 ### Loadbalancer
 #### Dockerfile
@@ -74,11 +70,12 @@ Run necessary command such as:
 2. Create the backend.conf and frontend.conf files
 3. Launch apache in the console
 
-#### //////javascript description etc
+#### discover.js
+Maintain the apache configuration according to the front and backend's heartbeats by comparing the beats and a certain timeout.
 
 ##
 ### Heartbeat
-
+In the front and backend, the heartbeat.js file send a beep on the multicast address. The loadbalancer is charged to listen those beeps and to maintain the configuration of the apache server. 
 
 ##
 ### Backend
@@ -96,7 +93,9 @@ Image based from node
 2. start heartbeat.js with mp2
 3. start the pm2 monitoring
 
-#### ///////// Le reste javascript description etc
+#### heartbeat.js
+Send a signal to the loadbalancer according to a given interval on the multicast address.
+
 ##
 ### Frontend
 #### Dockerfile
@@ -115,6 +114,9 @@ Run necessary command such as:
 1. start heartbeat.js with pm2
 2. Launch apache in the console
 
+#### heartbeat.js
+Send a signal to the loadbalancer according to a given interval on the multicast address.
+
 ##
 ## Result and validation
 Here is a screenshot showing the LoadBalancer managment UI. A bunch of backend and frontend have been launched to show the IP's of the different containers. In the ressources tab one can see the cookie that give the ROUTEID to folow. This cookie is given by Apache, it's the "sticky session". 
@@ -127,7 +129,7 @@ You can see below, that we made 9 color request what is exactly in relation with
 [![](pictures/ApplicationWebTest1.jpg)](pictures/ApplicationWebTest1.jpg)
 
 
-
+# Lab 05 instructions
 ##
 ### Objectives
 
