@@ -12,7 +12,7 @@ Thibault Schowing
 
 ### Members contribution
 ##  
-Due to the required level of understanding for this lab, most of the tasks have been accomplished in group and not by a single person. This allows every member to search for and understand the required steps.
+Due to the required level of understanding for this lab, most of the tasks have been accomplished in group and not by a single person. This allows every member to search for and understand the required steps. However each person was responsible of a part of the project.
  
 ##
 
